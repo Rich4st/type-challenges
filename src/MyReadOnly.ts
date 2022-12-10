@@ -4,6 +4,12 @@ interface Todo {
   completed: boolean
 }
 
+/**
+ * @description Make all properties in T readonly
+ * @example type TodoPreview = MyReadonly<Todo> // { readonly title: string; readonly description: string; readonly completed: boolean; }
+ *
+ */
+
 type MyReadonly<T> = { readonly [P in keyof T]: T[P] }
 
 const todo: MyReadonly<Todo> = {
