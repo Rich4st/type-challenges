@@ -2,6 +2,7 @@ type arr1 = ['a', 'b', 'c']
 type arr2 = [3, 2, 1]
 
 /**
+ * https://github.com/type-challenges/type-challenges/blob/main/questions/00014-easy-first/README.zh-CN.md
  * @description Returns the type of the first element of the array
  * @example type a = First<['a', 'b', 'c']> // a
  * use `infer` keyword to get the type of the first element
