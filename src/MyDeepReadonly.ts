@@ -11,7 +11,7 @@ interface X {
  * 递归实现为：如果是对象，递归调用为类型添加readonly，否则直接返回该类型
  */
 
-type MyDeepReadonly<T> = {
+type MyDeepReadonly<T extends { [propName: string]: any }> = {
   readonly [P in keyof T]: T[P] extends object
     ? MyDeepReadonly<T[P]>
     : T[P]
