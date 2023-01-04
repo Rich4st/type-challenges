@@ -1,4 +1,5 @@
 const foo = (_arg1: string, _arg2: number): void => {}
+const bar = (a: number, b: boolean) => boolean
 
 /**
  * https://github.com/type-challenges/type-challenges/blob/main/questions/03312-easy-parameters/README.zh-CN.md
@@ -9,3 +10,4 @@ const foo = (_arg1: string, _arg2: number): void => {}
 type MyParameters<T> = T extends (...args: infer P) => any ? P : never
 
 type result = MyParameters<typeof foo> // expected to be ["string", number]
+type result1 = MyParameters<typeof bar>
